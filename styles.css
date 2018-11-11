@@ -1,0 +1,47 @@
+body{
+
+}
+
+nav {
+	float: right;
+}
+
+nav a, a:hover{
+	color: white;
+}
+
+nav li{
+	list-style-type: none;
+	float: left;
+	padding: 10px;
+}
+
+h1 {
+
+	font-weight: bolder;
+}
+
+#summary{
+	height: 300px;
+	margin-top: 0px;
+	background-color: darkgreen;
+	border: solid 2px black;
+}
+
+#experience {
+	margin: auto;
+	width: 95%;
+}
+
+.section{
+	border: solid 2px black;
+	margin-top: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 10px;
+	max-height: 300px;
+}
+
+.job-details ul{
+	list-style-type: none;
+}
