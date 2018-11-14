@@ -22,19 +22,28 @@ h1 {
 }
 
 #summary{
-	height: 300px;
+	height: 200px;
 	margin-top: 0px;
 	background-color: blue;
 	border: solid 1px lightgrey;
 }
 
-#experience {
+#content{
 	margin: auto;
-	width: 95%;
+	width: 100%;
+	margin-left: 15px;
+	margin-right: 10px;
+}
+#experience {
+	float: left;
 }
 
 #education{
+	float: left;
+}
 
+#certificates{
+	float: left;
 }
 .section{
 	border: solid 1px lightgrey;
@@ -42,7 +51,9 @@ h1 {
 	margin-right: 10px;
 	margin-left: 10px;
 	padding: 10px;
-	max-height: 300px;
+	max-height: 200px;
+	min-height: 150px;
+	width: 100%;
 }
 
 .job-details ul{
