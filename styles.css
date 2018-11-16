@@ -1,6 +1,12 @@
-body{
-
+@media only screen and (max-width: 921px){ 
+	.job-details ul{
+		
+	}
+	#section{
+		justify-content: center;
+	}
 }
+
 
 nav {
 	float: right;
@@ -21,6 +27,14 @@ h1 {
 	font-weight: bolder;
 }
 
+div .row h4{
+	color: lightblue;
+}
+
+#home a{
+	color: blue;
+}
+
 #summary{
 	height: 200px;
 	margin-top: 0px;
@@ -30,9 +44,13 @@ h1 {
 
 #content{
 	margin: auto;
-	width: 100%;
-	margin-left: 15px;
-	margin-right: 10px;
+	width: 90%;
+	color: grey;
+
+}
+
+#content h3{
+	color: darkgrey;
 }
 #experience {
 	float: left;
@@ -46,19 +64,34 @@ h1 {
 	float: left;
 }
 .section{
-	border: solid 1px lightgrey;
-	margin-top: 20px;
+	border-bottom: solid 1px lightblue;
+	margin-top: 10px;
 	margin-right: 10px;
 	margin-left: 10px;
-	padding: 10px;
-	max-height: 200px;
-	min-height: 150px;
+	padding: 15px;
 	width: 100%;
+}
+
+.section p{
+	clear: left;
 }
 
 .job-details ul{
 	list-style-type: none;
 	padding-right: 10px;
-	margin: 0;
-	padding: 0;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.job-details li{
+	padding:10px;
+	float: left;
+}
+
+.top-button{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 30px;
+	z-index: 1;
 }
