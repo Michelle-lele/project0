@@ -2,18 +2,20 @@
 	.job-details ul{
 		
 	}
-	#section{
-		justify-content: center;
+	body{
+		text-align: center;
 	}
 }
 
 
 nav {
 	float: right;
+	text-transform: uppercase;
+	z-index: 3;
 }
 
 nav a, a:hover{
-	color: white;
+	color: orange;
 }
 
 nav li{
@@ -36,10 +38,18 @@ div .row h4{
 }
 
 #summary{
-	height: 200px;
 	margin-top: 0px;
-	background-color: blue;
-	border: solid 1px lightgrey;
+	background-color: ;
+	text-align: center;
+}
+#summary h1{
+	color: #2d94fc;
+	padding-bottom: 3px;
+}
+
+.profile-image{
+	width: 200px;
+
 }
 
 #content{
@@ -52,40 +62,62 @@ div .row h4{
 #content h3{
 	color: darkgrey;
 }
-#experience {
+
+.top-title{
+	color: #2d94fc;
+	text-transform: uppercase;
+	font-weight: bold;
+	width: 100%;
+	padding-top: 10px;
+	margin: auto 20px;
+}
+
+#experience, #education, #certificates, #projects, #courses {
 	float: left;
 }
 
-#education{
-	float: left;
-}
+/*.row{
+		background: orange;
+		border: 1px solid green;
+}*/
 
-#certificates{
-	float: left;
+#project{
+	
 }
 .section{
 	border-bottom: solid 1px lightblue;
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-right: 10px;
 	margin-left: 10px;
-	padding: 15px;
+	margin-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
 	width: 100%;
+}
+
+.section h4{
+	margin-bottom: 2px;
 }
 
 .section p{
 	clear: left;
 }
 
-.job-details ul{
+.job-details{
+	padding-top: 0px;
+}
+
+.job-details ul, #summary ul{
 	list-style-type: none;
 	padding-right: 10px;
 	margin-left: 0;
 	padding-left: 0;
 }
 
-.job-details li{
-	padding:10px;
+.job-details li, #summary li{
+	padding: 5px;
 	float: left;
+	padding-top: 0px;
 }
 
 .top-button{
