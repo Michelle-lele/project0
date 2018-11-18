@@ -1,21 +1,38 @@
 @media only screen and (max-width: 921px){ 
-	.job-details ul{
 		
-	}
 	body{
 		text-align: center;
 	}
+
+	.job-details, .overview{
+		text-align: center;
+	}
+
+	.job-details ul, #overview ul{
+		display: inline-block;
+	}
+
 }
 
+@media only screen and (max-width: 700px){ 
+	.profile-image{
+		width: 300px;
+	}
+	
+}
 
 nav {
-	float: right;
+	text-align: center;
 	text-transform: uppercase;
 	z-index: 3;
 }
 
 nav a, a:hover{
 	color: orange;
+}
+nav ul{
+	display: inline-block;
+	margin-bottom: 0px;
 }
 
 nav li{
@@ -37,12 +54,11 @@ div .row h4{
 	color: blue;
 }
 
-#summary{
+#overview{
 	margin-top: 0px;
-	background-color: ;
 	text-align: center;
 }
-#summary h1{
+#overview h1{
 	color: #2d94fc;
 	padding-bottom: 3px;
 }
@@ -105,19 +121,26 @@ div .row h4{
 
 .job-details{
 	padding-top: 0px;
+	text-align: center;
 }
 
-.job-details ul, #summary ul{
+.job-details ul, #overview ul{
 	list-style-type: none;
 	padding-right: 10px;
 	margin-left: 0;
 	padding-left: 0;
 }
 
-.job-details li, #summary li{
+.job-details li, #overview li{
 	padding: 5px;
 	float: left;
 	padding-top: 0px;
+}
+
+#overview li{
+	font-size: 16px;
+	text-transform: uppercase;
+
 }
 
 .top-button{
