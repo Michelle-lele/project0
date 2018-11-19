@@ -1,4 +1,4 @@
-@media only screen and (max-width: 921px){ 
+@media only screen and (max-width: 992px){ 
 		
 	body{
 		text-align: center;
@@ -10,15 +10,15 @@
 
 	.job-details ul, #overview ul{
 		display: inline-block;
+
 	}
 
 }
 
 @media only screen and (max-width: 700px){ 
 	.profile-image{
-		width: 300px;
+		
 	}
-	
 }
 
 nav {
@@ -56,16 +56,22 @@ div .row h4{
 
 #overview{
 	margin-top: 0px;
-	text-align: center;
 }
 #overview h1{
 	color: #2d94fc;
 	padding-bottom: 3px;
 }
 
-.profile-image{
-	width: 200px;
+.details{
+	float: left;
+	padding-left: 5px;
+}
 
+.profile-image{
+	height: 100%;
+	max-height: 170px;
+	padding-right: 5px;
+	float: right;
 }
 
 #content{
@@ -88,7 +94,7 @@ div .row h4{
 	margin: auto 20px;
 }
 
-#experience, #education, #certificates, #projects, #courses {
+#experience, #education, #certificates, #projects{
 	float: left;
 }
 
@@ -97,10 +103,14 @@ div .row h4{
 		border: 1px solid green;
 }*/
 
-#project{
-	
+skill{
+	border: 1px solid lightblue;
+	padding: 8px;
+	font-size: 18px;
+	display: inline-block;
+	margin: 3px;
 }
-.section{
+section{
 	border-bottom: solid 1px lightblue;
 	margin-top: 0px;
 	margin-right: 10px;
@@ -111,11 +121,12 @@ div .row h4{
 	width: 100%;
 }
 
-.section h4{
+section h4{
 	margin-bottom: 2px;
+	overflow-wrap: break-word;
 }
 
-.section p{
+section p{
 	clear: left;
 }
 
