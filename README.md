@@ -2,7 +2,7 @@
 
 Web Programming with Python and JavaScript
 
-Your website must contain at least four different .html pages, and it should be possible to get from any page on your website to any other page by following one or more hyperlinks.
+Your website must contain at least [x] four different .html pages, and it should be possible to get from any page on your website to any other page by following one or more hyperlinks.
 
 Your website must include at least [v] one list (ordered or unordered), at least [x] one table, and at least [v] one image.
 
