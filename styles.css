@@ -12,13 +12,15 @@
 		display: inline-block;
 
 	}
-
 }
 
+
 @media only screen and (max-width: 700px){ 
-	.profile-image{
-		
+	#top-content{
+		background-size: auto 100%;
+		height: 300px;
 	}
+	
 }
 
 @media print{
@@ -62,12 +64,19 @@ p::selection{
 	color: white;
 }
 
-div .row h4{
+div .row h4, #templates h3{
 	color: lightblue;
 }
 
 #home a{
 	color: blue;
+}
+
+#top-content{
+	background-image: url(media/background-work.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	height: 300px;
 }
 
 #overview{
@@ -77,7 +86,61 @@ div .row h4{
 	color: #2d94fc;
 	padding-bottom: 3px;
 }
+#headline{
+	text-align: center;
+	color: white;
+	padding-top: 30px;
+}
 
+#headline h3{
+	font-size: 18pt;
+	color: lightblue;
+	font-style: italic;
+	font-family: serif;
+}
+#templates h2, #about h2{
+	color: orange;
+	text-align: center;
+	padding-top: 20px;
+	margin-top: 50px;
+}
+
+.template{
+	height: inherit;
+	margin: 0px;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px solid white;
+	text-align: justify;
+	vertical-align: auto;
+	/* TO DO vertically center contents of div*/
+}
+
+.template:hover{
+	border-color: orange;
+	/* TO DO change button color on div hover*/
+}
+
+.template img {
+  width: 100%;
+  height: auto;  
+  max-height: 200px;
+}
+
+.template button{
+	background-color: white;
+	border: 1px solid darkorange;
+	border-radius: 3px;
+	width: 100%;
+	height: 40px;
+	font-weight: bold;
+	font-size: 13pt;
+	text-transform: uppercase;
+}
+
+.template a{
+	color: orange;
+}
 .details{
 	float: left;
 	padding-left: 5px;
@@ -90,11 +153,19 @@ div .row h4{
 	float: right;
 }
 
-#content{
+#content, #templates, #auto{
 	margin: auto;
 	width: 90%;
 	color: grey;
 
+}
+
+#about{
+	min-height: 200px;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;	
+	/* TO DO vertically center */
 }
 
 #content h3{
