@@ -39,7 +39,7 @@ nav {
 	font-size: large;
 }
 
-nav a, a:hover, #home a:hover{
+nav a, a:hover, #home i:hover{
 	color: orange;
 }
 
@@ -64,7 +64,7 @@ p::selection{
 	color: white;
 }
 
-div .row h4, #templates h3{
+div .row h4, #templates h3, #home i{
 	color: lightblue;
 }
 
@@ -77,6 +77,7 @@ div .row h4, #templates h3{
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	height: 300px;
+	background-size: cover;
 }
 
 #overview{
@@ -98,10 +99,11 @@ div .row h4, #templates h3{
 	font-style: italic;
 	font-family: serif;
 }
+
 #templates h2, #about h2{
 	color: orange;
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 10px;
 	margin-top: 50px;
 }
 
@@ -112,7 +114,6 @@ div .row h4, #templates h3{
 	padding: 10px;
 	border: 1px solid white;
 	text-align: justify;
-	vertical-align: auto;
 	/* TO DO vertically center contents of div*/
 }
 
@@ -121,10 +122,11 @@ div .row h4, #templates h3{
 	/* TO DO change button color on div hover*/
 }
 
+
 .template img {
   width: 100%;
   height: auto;  
-  max-height: 200px;
+  max-height: 300px;
 }
 
 .template button{
@@ -136,10 +138,20 @@ div .row h4, #templates h3{
 	font-weight: bold;
 	font-size: 13pt;
 	text-transform: uppercase;
+	color: orange;
+	text-decoration: none;
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+.template button:hover{
+	background-color: orange;
+	color: white;
 }
 
 .template a{
-	color: orange;
+	text-decoration: none;
 }
 .details{
 	float: left;
@@ -153,7 +165,7 @@ div .row h4, #templates h3{
 	float: right;
 }
 
-#content, #templates, #auto{
+#content, #templates, #about{
 	margin: auto;
 	width: 90%;
 	color: grey;
@@ -161,10 +173,10 @@ div .row h4, #templates h3{
 }
 
 #about{
-	min-height: 200px;
+	min-height: 300px;
 	text-align: center;
-	padding-left: 20px;
-	padding-right: 20px;	
+	font-size: 18pt;
+	padding: 20px;
 	/* TO DO vertically center */
 }
 
