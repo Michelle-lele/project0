@@ -21,15 +21,26 @@
 	}
 }
 
+@media print{
+	nav{
+		display: none;
+	}
+	#home{
+		display: none;
+	}
+}
+
 nav {
 	text-align: center;
 	text-transform: uppercase;
 	z-index: 3;
+	font-size: large;
 }
 
-nav a, a:hover{
+nav a, a:hover, #home a:hover{
 	color: orange;
 }
+
 nav ul{
 	display: inline-block;
 	margin-bottom: 0px;
@@ -44,6 +55,11 @@ nav li{
 h1 {
 
 	font-weight: bolder;
+}
+
+p::selection{
+	background-color: orange;
+	color: white;
 }
 
 div .row h4{
