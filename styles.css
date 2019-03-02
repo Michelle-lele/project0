@@ -171,10 +171,18 @@ div .row h4, #templates h3, #home i{
 	height: 100%;
 	max-height: 170px;
 	padding-right: 5px;
-	float: right;
+	float: left;
 }
 
-#content, #templates, #about{
+#content{
+	margin: auto;
+	width: 90%;
+	color: grey;
+	max-width: 1300px;
+
+}
+
+#templates, #about{
 	margin: auto;
 	width: 90%;
 	color: grey;
