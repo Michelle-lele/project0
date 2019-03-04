@@ -1,10 +1,24 @@
-# Project 0
+# Project 0 Overview
+
+Project 0 presents a simple website presenting a couple of CV template layouts that will be further expanded so users can choose a CV template add their information and download or share online their CV/s. 
+
+index.html is a short landing page describing the product and its purpose and allowing to browse the existing CV templates.
+TO DO template 1 description
+TO DO template 2 description
+TO DO template 3 description
+
+styles.css general styling for all pages
+templates.css styling for the CV templates
+
+TO DO describe styles.scss
+
+# Project 0 Requirements
 
 Web Programming with Python and JavaScript
 
-Your website must contain at least [x] four different .html pages, and it should be possible to get from any page on your website to any other page by following one or more hyperlinks.
+Your website must contain at least [v] four different .html pages, and it should be possible to get from any page on your website to any other page by following one or more hyperlinks.
 
-Your website must include at least [v] one list (ordered or unordered), at least [x] one table, and at least [v] one image.
+Your website must include at least [v] one list (ordered or unordered), at least [v] one table, and at least [v] one image.
 
 Your website must have at least [v] one stylesheet file.
 
