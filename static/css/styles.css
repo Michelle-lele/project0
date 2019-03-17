@@ -19,18 +19,16 @@ nav {
   text-transform: uppercase;
   z-index: 3;
   font-size: large; }
+  nav ul {
+    display: inline-block;
+    margin-bottom: 0px; }
+  nav li {
+    list-style-type: none;
+    float: left;
+    padding: 10px; }
 
 nav a, a:hover, #home i:hover {
   color: orange; }
-
-nav ul {
-  display: inline-block;
-  margin-bottom: 0px; }
-
-nav li {
-  list-style-type: none;
-  float: left;
-  padding: 10px; }
 
 h1 {
   font-weight: bolder; }
@@ -56,15 +54,13 @@ div .row h4, #templates h3, #home i {
   text-align: center;
   color: white;
   padding-top: 30px; }
-
-#headline h1 {
-  font-size: 40pt; }
-
-#headline h3 {
-  font-size: 18pt;
-  color: lightblue;
-  font-style: italic;
-  font-family: serif; }
+  #headline h1 {
+    font-size: 40pt; }
+  #headline h3 {
+    font-size: 18pt;
+    color: lightblue;
+    font-style: italic;
+    font-family: serif; }
 
 #templates h2, #about h2 {
   color: orange;
@@ -80,37 +76,34 @@ div .row h4, #templates h3, #home i {
   border: 1px solid white;
   text-align: justify;
   /* TO DO vertically center contents of div*/ }
+  .template img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; }
+  .template button {
+    background-color: white;
+    border: 1px solid orange;
+    border-radius: 3px;
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    font-size: 13pt;
+    text-transform: uppercase;
+    color: orange;
+    text-decoration: none;
+    display: block;
+    padding: 0px;
+    margin: 0px; }
+  .template a {
+    ext-decoration: none; }
 
 .template:hover {
   border-color: orange;
   /* TO DO change button color on div hover*/ }
 
-.template img {
-  width: 100%;
-  height: auto;
-  max-height: 300px; }
-
-.template button {
-  background-color: white;
-  border: 1px solid darkorange;
-  border-radius: 3px;
-  width: 100%;
-  height: 40px;
-  font-weight: bold;
-  font-size: 13pt;
-  text-transform: uppercase;
-  color: orange;
-  text-decoration: none;
-  display: block;
-  padding: 0px;
-  margin: 0px; }
-
 .template button:hover {
   background-color: orange;
   color: white; }
-
-.template a {
-  text-decoration: none; }
 
 #templates, #about {
   margin: auto;
@@ -124,19 +117,21 @@ div .row h4, #templates h3, #home i {
   padding: 20px;
   /* TO DO vertically center */ }
 
-.top-title {
-  color: #2d94fc;
-  text-transform: uppercase;
-  font-weight: bold;
-  width: 100%;
-  padding-top: 10px;
-  margin: auto 20px; }
+#footer {
+  margin-top: 20px;
+  padding: 15px;
+  text-align: center;
+  color: grey;
+  font-size: 16px; }
+  #footer a {
+    color: #181818;
+    font-size: 18px; }
 
 .top-button {
   position: fixed;
   bottom: 0;
   right: 0;
   margin: 30px;
-  z-index: 1; }
+  z-index: 2; }
 
 /*# sourceMappingURL=styles.css.map */

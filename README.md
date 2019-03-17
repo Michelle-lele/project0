@@ -3,20 +3,17 @@
 Project 0 presents a simple website presenting a couple of CV template layouts that will be further expanded so users can choose a CV template add their information and download or share online their CV/s. 
 
 index.html is a short landing page describing the product and its purpose and allowing to browse the existing CV templates.
-TO DO template 1 description
-TO DO template 2 description
-TO DO template 3 description
+template-leia, template-jbond & template-shrek are the CV templates
 
-styles.css general styling for all pages
-templates.css styling for the CV templates
+styles.scss general styling for all pages
+templates.scss styling for the CV templates
 
-TO DO describe styles.scss
 
 # Project 0 Requirements
 
 Web Programming with Python and JavaScript
 
-Your website must contain at least [v] four different .html pages, and  [x] it should be possible to get from any page on your website to any other page by following one or more hyperlinks.
+Your website must contain at least [v] four different .html pages, and  [v] it should be possible to get from any page on your website to any other page by following one or more hyperlinks.
 
 Your website must include at least [v] one list (ordered or unordered), at least [v] one table, and at least [v] one image.
 
@@ -28,6 +25,6 @@ Your stylesheet(s) must include at least [v] one mobile-responsive @media query,
 
 You must use [v] Bootstrap 4 on your website, taking advantage of at least [v] one Bootstrap component, and using at least [v] two Bootstrap columns for layout purposes using Bootstrap’s grid model.
 
-Your stylesheets must use at least [v] one SCSS variable, at least [x] one example of SCSS nesting, and at least [x] one use of SCSS inheritance.
+Your stylesheets must use at least [v] one SCSS variable, at least [v] one example of SCSS nesting, and at least [x] one use of SCSS inheritance.
 
-[x] In README.md, include a short writeup describing your project, what’s contained in each file, and (optionally) any other additional information the staff should know about your project.
+[v] In README.md, include a short writeup describing your project, what’s contained in each file, and (optionally) any other additional information the staff should know about your project.

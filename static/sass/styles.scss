@@ -1,4 +1,5 @@
 $nav_color: orange;
+$templates_style: orange;
 
 @media only screen and (max-width: 992px){ 
 		
@@ -34,22 +35,24 @@ nav {
 	text-transform: uppercase;
 	z-index: 3;
 	font-size: large;
+
+	ul {
+		display: inline-block;
+		margin-bottom: 0px;
+	}
+
+	li {
+		list-style-type: none;
+		float: left;
+		padding: 10px;
+	}
+
 }
 
 nav a, a:hover, #home i:hover{
 	color: $nav_color;
 }
 
-nav ul{
-	display: inline-block;
-	margin-bottom: 0px;
-}
-
-nav li{
-	list-style-type: none;
-	float: left;
-	padding: 10px;
-}
 
 h1 {
 
@@ -81,17 +84,17 @@ div .row h4, #templates h3, #home i{
 	text-align: center;
 	color: white;
 	padding-top: 30px;
-}
 
-#headline h1{
-	font-size: 40pt;
-}
+	h1 {
+		font-size: 40pt;
+	}
 
-#headline h3{
-	font-size: 18pt;
-	color: lightblue;
-	font-style: italic;
-	font-family: serif;
+	h3 {
+		font-size: 18pt;
+		color: lightblue;
+		font-style: italic;
+		font-family: serif;
+	}
 }
 
 #templates h2, #about h2{
@@ -109,45 +112,44 @@ div .row h4, #templates h3, #home i{
 	border: 1px solid white;
 	text-align: justify;
 	/* TO DO vertically center contents of div*/
+
+	img {
+		width: 100%;
+		height: auto;  
+		max-height: 300px;
+	}
+
+	button {
+		background-color: white;
+		border: 1px solid $templates_style;
+		border-radius: 3px;
+		width: 100%;
+		height: 40px;
+		font-weight: bold;
+		font-size: 13pt;
+		text-transform: uppercase;
+		color: $templates_style;
+		text-decoration: none;
+		display: block;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	a {
+		ext-decoration: none;
+	}
 }
 
 .template:hover{
-	border-color: orange;
+	border-color: $templates_style;
 	/* TO DO change button color on div hover*/
 }
 
 
-.template img {
-  width: 100%;
-  height: auto;  
-  max-height: 300px;
-}
-
-.template button{
-	background-color: white;
-	border: 1px solid darkorange;
-	border-radius: 3px;
-	width: 100%;
-	height: 40px;
-	font-weight: bold;
-	font-size: 13pt;
-	text-transform: uppercase;
-	color: orange;
-	text-decoration: none;
-	display: block;
-	padding: 0px;
-	margin: 0px;
-}
-
 .template button:hover{
-	background-color: orange;
+	background-color: $templates_style;
 	color: white;
 }
-
-.template a{
-	text-decoration: none;
-}
-
 
 #templates, #about{
 	margin: auto;
@@ -164,14 +166,17 @@ div .row h4, #templates h3, #home i{
 	/* TO DO vertically center */
 }
 
+#footer{
+	margin-top: 20px;
+	padding: 15px;
+	text-align: center;
+	color: grey;
+	font-size: 16px;
 
-.top-title{
-	color: #2d94fc;
-	text-transform: uppercase;
-	font-weight: bold;
-	width: 100%;
-	padding-top: 10px;
-	margin: auto 20px;
+	a{
+		color: #181818;
+		font-size: 18px;
+	}
 }
 
 .top-button{
@@ -179,5 +184,5 @@ div .row h4, #templates h3, #home i{
 	bottom: 0;
 	right: 0;
 	margin: 30px;
-	z-index: 1;
+	z-index: 2;
 }

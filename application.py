@@ -7,15 +7,15 @@ app = Flask(__name__)
 def index():
 	return render_template("index.html")
 
-@app.route("/template-leia")
+@app.route("/template-leia.html")
 def template_leia():
 	return render_template("template-leia.html")
 
-@app.route("/template-shrek")
+@app.route("/template-shrek.html")
 def template_shrek():
 	return render_template("template-shrek.html")
 
-@app.route("/template-jbond")
+@app.route("/template-jbond.html")
 def template_jbond():
 	return render_template("template-jbond.html")
 

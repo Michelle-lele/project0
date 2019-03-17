@@ -1,109 +1,23 @@
-@media only screen and (max-width: 992px){ 
+/*
+Errno::ENOENT: No such file or directory @ rb_sysopen - templates.scss
 
-	.job-details, .overview{
-		text-align: center;
-	}
-
-	.job-details ul, #overview ul{
-		display: inline-block;
-
-	}
-}
-
-#overview{
-	margin-top: 0px;
-}
-#overview h1{
-	color: #2d94fc;
-	padding-bottom: 3px;
-}
-
-#overview li{
-	font-size: 16px;
-	text-transform: uppercase;
-
-}
-
-
-.job-details{
-	padding-top: 0px;
-	text-align: center;
-}
-
-.job-details ul, #overview ul{
-	list-style-type: none;
-	padding-right: 10px;
-	margin-left: 0;
-	padding-left: 0;
-}
-
-.job-details li, #overview li{
-	padding: 5px;
-	float: left;
-	padding-top: 0px;
-}
-
-
-.details{
-	float: left;
-	padding-left: 5px;
-}
-
-.profile-image{
-	height: 100%;
-	max-height: 170px;
-	padding-right: 5px;
-	float: left;
-}
-
-
-#content{
-	margin: auto;
-	width: 90%;
-	color: grey;
-	max-width: 1300px;
-
-}
-
-
-#content h3{
-	color: darkgrey;
-}
-
-#experience, #education, #certificates, #projects{
-	float: left;
-}
-
-/*.row{
-		background: orange;
-		border: 1px solid green;
-}*/
-
-skill{
-	border: 1px solid lightblue;
-	padding: 8px;
-	font-size: 18px;
-	display: inline-block;
-	margin: 3px;
-}
-
-
-section{
-	border-bottom: solid 1px lightblue;
-	margin-top: 0px;
-	margin-right: 10px;
-	margin-left: 10px;
-	margin-bottom: 10px;
-	padding-left: 15px;
-	padding-right: 15px;
-	width: 100%;
-}
-
-section h4{
-	margin-bottom: 2px;
-	overflow-wrap: break-word;
-}
-
-section p{
-	clear: left;
-}
+Backtrace:
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:454:in `read'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:454:in `update_stylesheet'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:294:in `watch'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin.rb:109:in `method_missing'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/exec/sass_scss.rb:358:in `watch_or_update'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/exec/base.rb:50:in `parse'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/exec/base.rb:18:in `parse!'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/bin/sass:13:in `<top (required)>'
+C:/Ruby26-x64/bin/sass:23:in `load'
+C:/Ruby26-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Errno::ENOENT: No such file or directory @ rb_sysopen - templates.scss"; }
