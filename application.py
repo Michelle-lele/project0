@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 
 app = Flask(__name__)
@@ -6,9 +6,15 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index.html")
 def index():
-	username = "genadi"
-	username = username.capitalize()
-	return render_template("index.html", username=username)
+	user_name = "genadi"
+	user_name = user_name.capitalize()
+	return render_template("index.html", user_name=user_name)
+
+@app.route("/signup.html", methods=["POST", "GET"])
+def signup():
+	user_email = request.form.get("email")
+	return render_template("signup.html", user_email=user_email)
+
 
 @app.route("/template-leia.html")
 def template_leia():
