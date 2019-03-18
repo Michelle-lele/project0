@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<!-- -->
-<html>
-    <head>
-    	<meta charset="utf-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-        <title>CV Template: Princess Leia Organa Solo</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="../static/css/styles.css">
-		<link rel="stylesheet" href="../static/css/templates.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    </head>
-    <body>
+{% extends "templates-layout.html" %}
+
+{% block body %}
     	<div id="home">
     	<a href="#home"><i class="fas fa-arrow-up  fa-lg top-button"></i></a>
     	</div>
@@ -221,12 +211,11 @@
 		</div>
 		<div id="footer">
 				<span class="template_nav">
-					<a href="template-jbond.html">James Bond</a>
+					<a href="{{ url_for('template_jbond')  }}">James Bond</a>
 					<i class="fas fa-chevron-left fa-lg"></i>
-					<a href="/#templates">Templates</a>
+					<a href="{{ url_for('index')  }}#templates">Templates</a>
 					<i class="fas fa-chevron-right fa-lg"></i>
-					<a href="template-shrek.html">Shrek</a>
+					<a href="{{ url_for('template_shrek')  }}">Shrek</a>
 				</span>
 			</div>
-    </body>
-</html>
+ {% endblock %}
