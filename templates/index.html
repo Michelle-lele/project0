@@ -18,6 +18,12 @@
 		    			<li><a href="#about">About</a></li>
 		    			<li><a href="#templates">Templates</a></li>
 		    		</ul>	
+		    		<span id="account">{% if username %}
+					    Hello, {{ username }}
+					    {% else %}
+					    Hello!
+					    {% endif %}
+					</span>
 		    	</nav>
 		    <div id="headline">
 		        <h1>Simple CV maker!</h1>
