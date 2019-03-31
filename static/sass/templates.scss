@@ -1,3 +1,6 @@
+$headlines_color: #2d94fc;
+$borders_color: lightblue;
+
 @media only screen and (max-width: 992px){ 
 
 	.job-details, .overview{
@@ -10,20 +13,49 @@
 	}
 }
 
-#overview{
+.table{
+	display: inline-table;
+	text-align: center;
+}
+
+#overview {
 	margin-top: 0px;
-}
-#overview h1{
-	color: #2d94fc;
-	padding-bottom: 3px;
+	text-align: center;
+
+	h1 {
+		color: $headlines_color;
+		padding-bottom: 3px;
+	}
+
+	li {
+		font-size: 16px;
+		text-transform: uppercase;
+	}
 }
 
-#overview li{
-	font-size: 16px;
+#summary {
+	text-align: center;
+}
+
+#footer {
+	width: 100%;
+	opacity: 0.6;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	background: white;
+	border-top: 1px solid lightgrey;
+}
+
+.top-title{
+	color: $headlines_color;
 	text-transform: uppercase;
-
+	font-weight: bold;
+	width: 100%;
+	padding-top: 10px;
+	margin: auto 20px;
 }
-
 
 .job-details{
 	padding-top: 0px;
@@ -63,24 +95,20 @@
 	color: grey;
 	max-width: 1300px;
 
+	h3{
+		color: darkgrey;
+	}
+
 }
 
-
-#content h3{
-	color: darkgrey;
-}
 
 #experience, #education, #certificates, #projects{
 	float: left;
 }
 
-/*.row{
-		background: orange;
-		border: 1px solid green;
-}*/
 
-skill{
-	border: 1px solid lightblue;
+.skill{
+	border: 1px solid $borders_color;
 	padding: 8px;
 	font-size: 18px;
 	display: inline-block;
@@ -88,8 +116,8 @@ skill{
 }
 
 
-section{
-	border-bottom: solid 1px lightblue;
+section {
+	border-bottom: solid 1px $borders_color;
 	margin-top: 0px;
 	margin-right: 10px;
 	margin-left: 10px;
@@ -97,13 +125,19 @@ section{
 	padding-left: 15px;
 	padding-right: 15px;
 	width: 100%;
+
+	h4 {
+		margin-bottom: 2px;
+		overflow-wrap: break-word;
+	}
+
+	p {
+		clear: left;
+	}
+
 }
 
-section h4{
-	margin-bottom: 2px;
-	overflow-wrap: break-word;
-}
-
-section p{
-	clear: left;
+.fa-chevron-left, .fa-chevron-right {
+	margin-left: 20px;
+	margin-right: 20px;
 }
