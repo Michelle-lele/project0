@@ -1,0 +1,49 @@
+{% extends "templates-layout.html" %}
+
+{% block body %}
+	<div id="home">
+    	<a href="#home"><i class="fas fa-arrow-up  fa-lg top-button"></i></a>
+    </div>
+    	<nav>
+		    <ul>
+		    	<li><a href="#experience">Experience</a></li>
+		    	<li><a href="#education">Education</a></li>
+		    	<li><a href="#certifications">Certifications</a></li>
+		    	<li><a href="#certifications">Languages</a></li>
+		    	<li><a href="#projects">Projects</a></li>
+		    	<li><a href="#courses">Courses</a></li>
+		    	<li><a href="#skills">Skills</a></li>
+		    </ul>	
+		</nav>
+		<div id="content" class="container-fluid">
+			<div id="overview" class="row col-12 justify-content-center">
+		    		<div class="details col-lg-12 col-sm-12">
+		        	<h1>Shrek (The Monster)</h1>
+					</div>
+			</div>
+			<div id="content" class="overview table-responsive col-12">
+				<table class="table">
+				<th>Phone</th>
+				<th>Email</th>
+				<th>Website</th>
+				<tr>
+				<td><i class="fas fa-phone"></i> +555(0)123456789 </li></td>
+				<td><i class="far fa-envelope"></i> <a href="mailto:">monster@farfaraway.fa</a></td>
+				<td><i class="fab fa-linkedin-in"></i> <a href="http://www.linkedin.com" target="blank">www.linkedin.com/in/shrek</a></td>
+				</tr>
+				</table>
+			</div>
+			<div id="summary" class="container-fluid">
+				<p>Large, green, physically intimidating ogre with a Scottish accent.</p>
+			</div>
+		</div>
+		<div id="footer">
+				<span class="template_nav">
+					<a href="{{ url_for('template_leia')  }}">Princess Leia</a>
+					<i class="fas fa-chevron-left fa-lg"></i>
+					<a href="{{ url_for('index')  }}#templates">Templates</a>
+					<i class="fas fa-chevron-right fa-lg"></i>
+					<a href="{{ url_for('template_jbond')  }}">James Bond</a>
+				</span>
+		</div>
+{% endblock %}
