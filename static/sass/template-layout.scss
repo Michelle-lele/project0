@@ -25,7 +25,7 @@ $templates_style: orange;
 }
 
 @media print{
-	nav{
+	nav{ 
 		display: none;
 	}
 	#home{
@@ -116,17 +116,17 @@ div .row h4, #templates h3, #home i{
 }
 
 .template{
-	height: 420px;
+	height: auto;
+	max-width: 400px;
 	margin: 0px;
 	margin-bottom: 10px;
 	padding: 10px;
 	border: 1px solid white;
 	text-align: justify;
-	/* TO DO vertically center contents of div*/
 
 	img {
 		width: 100%;  
-		height: 200px;
+		height: 250px;
 	}
 
 	button {
@@ -155,7 +155,6 @@ div .row h4, #templates h3, #home i{
 
 .template:hover{
 	border-color: $templates_style;
-	/* TO DO change button color on div hover*/
 }
 
 
@@ -173,10 +172,10 @@ div .row h4, #templates h3, #home i{
 
 #about{
 	min-height: 300px;
+	max-width: 800px;
 	text-align: center;
 	font-size: 18pt;
 	padding: 20px;
-	/* TO DO vertically center */
 }
 
 #footer{

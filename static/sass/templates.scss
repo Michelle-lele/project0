@@ -1,15 +1,34 @@
 $headlines_color: #2d94fc;
 $borders_color: lightblue;
 
-@media only screen and (max-width: 992px){ 
+@media only screen and (max-width: 600px){ 
 
-	.job-details, .overview{
+	.job-details{
 		text-align: center;
 	}
 
 	.job-details ul, #overview ul{
 		display: inline-block;
+	}
 
+	#overview{
+		padding: 0;
+		margin: 0;
+	}
+
+	#overview li{
+		float: none;
+	}
+
+	.summary{
+		clear: both;
+	}
+
+	#summary .profile-image{
+		float: none;
+		margin: 0;
+		padding: 0;
+		max-height: 500px;
 	}
 }
 
@@ -20,7 +39,7 @@ $borders_color: lightblue;
 
 #overview {
 	margin-top: 0px;
-	text-align: center;
+	text-align: center; 
 
 	h1 {
 		color: $headlines_color;
@@ -34,7 +53,7 @@ $borders_color: lightblue;
 }
 
 #summary {
-	text-align: center;
+	display: inline;
 }
 
 #footer {
@@ -75,9 +94,7 @@ $borders_color: lightblue;
 	padding-top: 0px;
 }
 
-
 .details{
-	float: left;
 	padding-left: 5px;
 }
 
@@ -85,6 +102,7 @@ $borders_color: lightblue;
 	height: 100%;
 	max-height: 170px;
 	padding-right: 5px;
+	margin: 15px 15px 0 0;
 	float: left;
 }
 
@@ -130,10 +148,6 @@ section {
 	h4 {
 		margin-bottom: 2px;
 		overflow-wrap: break-word;
-	}
-
-	p {
-		clear: left;
 	}
 
 }

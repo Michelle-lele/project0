@@ -79,16 +79,16 @@ div .row h4, #templates h3, #home i {
   margin-top: 50px; }
 
 .template {
-  height: 420px;
+  height: auto;
+  max-width: 400px;
   margin: 0px;
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid white;
-  text-align: justify;
-  /* TO DO vertically center contents of div*/ }
+  text-align: justify; }
   .template img {
     width: 100%;
-    height: 200px; }
+    height: 250px; }
   .template button {
     background-color: white;
     border: 1px solid orange;
@@ -110,8 +110,7 @@ div .row h4, #templates h3, #home i {
     ext-decoration: none; }
 
 .template:hover {
-  border-color: orange;
-  /* TO DO change button color on div hover*/ }
+  border-color: orange; }
 
 .template button:hover {
   background-color: orange;
@@ -124,10 +123,10 @@ div .row h4, #templates h3, #home i {
 
 #about {
   min-height: 300px;
+  max-width: 800px;
   text-align: center;
   font-size: 18pt;
-  padding: 20px;
-  /* TO DO vertically center */ }
+  padding: 20px; }
 
 #footer {
   margin-top: 20px;
@@ -146,4 +145,4 @@ div .row h4, #templates h3, #home i {
   margin: 30px;
   z-index: 2; }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=index.css.map */
