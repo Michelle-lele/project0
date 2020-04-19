@@ -1,0 +1,74 @@
+/*James Bond Template stylesheet*/
+
+$headlines_color: yellow;
+$borders_color: purple;
+
+/*Tablet portrait view? */
+@media only screen and (max-width: 600px){ 
+
+}
+
+/*Standard layout*/
+#overview {
+
+}
+
+#summary {
+	
+}
+
+.top-title{
+	
+}
+
+.job-details{
+	
+}
+
+.details{
+
+}
+
+.profile-image{
+
+}
+
+
+#content{
+}
+
+
+#experience, #education, #certificates, #projects{
+}
+
+
+.skill{
+	border: 1px solid $borders_color;
+	padding: 8px;
+	font-size: 18px;
+	display: inline-block;
+	margin: 3px;
+}
+
+
+section {
+	border-bottom: solid 1px $borders_color;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 100%;
+
+	h4 {
+		margin-bottom: 2px;
+		overflow-wrap: break-word;
+	}
+
+}
+
+p::selection{
+	background-color: purple;
+	color: white;
+}

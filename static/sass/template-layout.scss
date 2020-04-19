@@ -1,5 +1,8 @@
+/*Template controls styleshet*/
+
 $nav_color: orange;
-$templates_style: orange;
+
+/*TODO review and unify media breakpoints*/
 
 @media only screen and (max-width: 992px){ 
 		
@@ -9,19 +12,14 @@ $templates_style: orange;
 }
 
 @media only screen and (max-width: 700px){ 
-	#top-content{
+	/* #top-content{
 		background-size: auto 100%;
 		height: 300px;
-	}
+	} */
 
-	#account {
+	/* #account {
 		display: none;
-	}
-
-	#headline h1{
-		font-size: 10pt;
-	}
-	
+	} */
 }
 
 @media print{
@@ -70,12 +68,7 @@ h1 {
 	font-weight: bolder;
 }
 
-p::selection{
-	background-color: orange;
-	color: white;
-}
-
-div .row h4, #templates h3, #home i{
+#home i{
 	color: lightblue;
 }
 
@@ -83,102 +76,15 @@ div .row h4, #templates h3, #home i{
 	color: blue;
 }
 
-#top-content{
-	background-image: url(../media/background-work.jpg);
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	height: 300px;
-	background-size: cover;
-}
-
-#headline{
-	text-align: center;
-	color: white;
-	padding-top: 30px;
-
-	h1 {
-		font-size: 40pt;
-	}
-
-	h3 {
-		font-size: 18pt;
-		color: lightblue;
-		font-style: italic;
-		font-family: serif;
-	}
-}
-
-#templates h2, #about h2{
-	color: orange;
-	text-align: center;
-	padding-top: 10px;
-	margin-top: 50px;
-}
-
-.template{
-	height: auto;
-	max-width: 400px;
-	margin: 0px;
-	margin-bottom: 10px;
-	padding: 10px;
-	border: 1px solid white;
-	text-align: justify;
-
-	img {
-		width: 100%;  
-		height: 250px;
-	}
-
-	button {
-		background-color: white;
-		border: 1px solid $templates_style;
-		border-radius: 3px;
-		width: 95%;
-		height: 40px;
-		font-weight: bold;
-		font-size: 13pt;
-		text-transform: uppercase;
-		color: $templates_style;
-		text-decoration: none;
-		display: block;
-		padding: 0px;
-		margin: 0px;
-		position: absolute;
-		bottom: 10px;
-		text-align: center;
-	}
-
-	a {
-		ext-decoration: none;
-	}
-}
-
-.template:hover{
-	border-color: $templates_style;
-}
-
-
-.template button:hover{
-	background-color: $templates_style;
-	color: white;
-}
-
-#templates, #about{
-	margin: auto;
-	width: 90%;
-	color: grey;
-
-}
-
-#about{
-	min-height: 300px;
-	max-width: 800px;
-	text-align: center;
-	font-size: 18pt;
-	padding: 20px;
-}
-
-#footer{
+#footer {
+	width: 100%;
+	opacity: 0.6;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	background: white;
+	border-top: 1px solid lightgrey;
 	margin-top: 20px;
 	padding: 15px;
 	text-align: center;
@@ -189,6 +95,11 @@ div .row h4, #templates h3, #home i{
 		color: #181818;
 		font-size: 18px;
 	}
+}
+
+.fa-chevron-left, .fa-chevron-right {
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .top-button{

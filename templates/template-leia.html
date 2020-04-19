@@ -1,20 +1,10 @@
 {% extends "templates-layout.html" %}
 
-{% block body %}
-    	<div id="home">
-    	<a href="#home"><i class="fas fa-arrow-up  fa-lg top-button"></i></a>
-    	</div>
-    	<nav>
-		    <ul>
-		    	<li><a href="#experience">Experience</a></li>
-		    	<li><a href="#education">Education</a></li>
-		    	<li><a href="#certifications">Certifications</a></li>
-		    	<li><a href="#certifications">Languages</a></li>
-		    	<li><a href="#projects">Projects</a></li>
-		    	<li><a href="#courses">Courses</a></li>
-		    	<li><a href="#skills">Skills</a></li>
-		    </ul>	
-		</nav>
+{% block head %}
+<link rel="stylesheet" href="../static/css/templates/template-leia.css">
+{% endblock %}
+
+{% block content %}
 		<div id="content" class="container-fluid">
 			<div id="overview" class="row col-12 justify-content-center">
 		    		<div class="details col-lg-12 col-sm-12">
@@ -207,13 +197,4 @@
 				</section>
 			</div>
 		</div>
-		<div id="footer">
-				<span class="template_nav">
-					<a href="{{ url_for('template_jbond')  }}">James Bond</a>
-					<i class="fas fa-chevron-left fa-lg"></i>
-					<a href="{{ url_for('index')  }}#templates">Templates</a>
-					<i class="fas fa-chevron-right fa-lg"></i>
-					<a href="{{ url_for('template_shrek')  }}">Shrek</a>
-				</span>
-			</div>
  {% endblock %}

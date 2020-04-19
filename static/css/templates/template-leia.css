@@ -1,3 +1,5 @@
+/*Princes Leia Template stylesheet*/
+/*Tablet portrait view? */
 @media only screen and (max-width: 600px) {
   .job-details {
     text-align: center; }
@@ -20,10 +22,12 @@
     margin: 0;
     padding: 0;
     max-height: 500px; } }
-.table {
-  display: inline-table;
-  text-align: center; }
-
+/* Seems unneeded, to remove?
+.table{
+	display: inline-table;
+	text-align: center;
+} */
+/*Standard layout*/
 #overview {
   margin-top: 0px;
   text-align: center; }
@@ -36,16 +40,6 @@
 
 #summary {
   display: inline; }
-
-#footer {
-  width: 100%;
-  opacity: 0.6;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  background: white;
-  border-top: 1px solid lightgrey; }
 
 .top-title {
   color: #2d94fc;
@@ -112,8 +106,4 @@ section {
     margin-bottom: 2px;
     overflow-wrap: break-word; }
 
-.fa-chevron-left, .fa-chevron-right {
-  margin-left: 20px;
-  margin-right: 20px; }
-
-/*# sourceMappingURL=templates.css.map */
+/*# sourceMappingURL=template-leia.css.map */

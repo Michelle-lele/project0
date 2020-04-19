@@ -1,6 +1,8 @@
+/*Princes Leia Template stylesheet*/
 $headlines_color: #2d94fc;
 $borders_color: lightblue;
 
+/*Tablet portrait view? */
 @media only screen and (max-width: 600px){ 
 
 	.job-details{
@@ -32,11 +34,14 @@ $borders_color: lightblue;
 	}
 }
 
+/* Seems unneeded, to remove?
 .table{
 	display: inline-table;
 	text-align: center;
-}
+} */
 
+
+/*Standard layout*/
 #overview {
 	margin-top: 0px;
 	text-align: center; 
@@ -54,17 +59,6 @@ $borders_color: lightblue;
 
 #summary {
 	display: inline;
-}
-
-#footer {
-	width: 100%;
-	opacity: 0.6;
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	z-index: 1;
-	background: white;
-	border-top: 1px solid lightgrey;
 }
 
 .top-title{
@@ -152,7 +146,7 @@ section {
 
 }
 
-.fa-chevron-left, .fa-chevron-right {
-	margin-left: 20px;
-	margin-right: 20px;
+p::selection{
+	background-color: orange;
+	color: white;
 }

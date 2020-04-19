@@ -1,0 +1,28 @@
+/*James Bond Template stylesheet*/
+/*Tablet portrait view? */
+/*Standard layout*/
+.skill {
+  border: 1px solid purple;
+  padding: 8px;
+  font-size: 18px;
+  display: inline-block;
+  margin: 3px; }
+
+section {
+  border-bottom: solid 1px purple;
+  margin-top: 0px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%; }
+  section h4 {
+    margin-bottom: 2px;
+    overflow-wrap: break-word; }
+
+p::selection {
+  background-color: purple;
+  color: white; }
+
+/*# sourceMappingURL=template-jbond.css.map */
