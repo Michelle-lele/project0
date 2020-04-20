@@ -2,14 +2,14 @@
 /*Tablet portrait view? */
 /*Standard layout*/
 .skill {
-  border: 1px solid purple;
+  border: 1px solid red;
   padding: 8px;
   font-size: 18px;
   display: inline-block;
   margin: 3px; }
 
 section {
-  border-bottom: solid 1px purple;
+  border-bottom: solid 1px red;
   margin-top: 0px;
   margin-right: 10px;
   margin-left: 10px;
@@ -22,7 +22,7 @@ section {
     overflow-wrap: break-word; }
 
 p::selection {
-  background-color: purple;
+  background-color: red;
   color: white; }
 
 /*# sourceMappingURL=template-jbond.css.map */

@@ -1,7 +1,7 @@
 /*James Bond Template stylesheet*/
 
-$headlines_color: yellow;
-$borders_color: purple;
+$highlight_color: red;
+$borders_color: red;
 
 /*Tablet portrait view? */
 @media only screen and (max-width: 600px){ 
@@ -69,6 +69,6 @@ section {
 }
 
 p::selection{
-	background-color: purple;
+	background-color: $highlight_color;
 	color: white;
 }
