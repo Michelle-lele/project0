@@ -1,15 +1,52 @@
 /*James Bond Template stylesheet*/
-
 $highlight_color: red;
 $borders_color: red;
 
+
+@media only screen and (max-width: 992px){ 
+	#overview {
+		text-align: left;
+	}
+}
+
 /*Tablet portrait view? */
+
 @media only screen and (max-width: 600px){ 
 
 }
 
 /*Standard layout*/
+#content{
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-gap: 10px;
+	grid-auto-rows: 100%;
+}
+
 #overview {
+	display: grid;
+	grid-template-rows: 1fr auto 5fr;
+	background-color: black;
+	color: white;
+
+	ul {
+		list-style: none;
+	}
+}
+
+#arrow {
+	width: 0; 
+  	height: 0; 
+  	border-left: 20px solid transparent;
+  	border-right: 20px solid transparent;
+  	border-top: 20px solid white;
+}
+
+.details {
+
+}
+
+#headline {
 
 }
 
@@ -23,10 +60,6 @@ $borders_color: red;
 
 .job-details{
 	
-}
-
-.details{
-
 }
 
 .profile-image{
