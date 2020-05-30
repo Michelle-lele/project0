@@ -4,6 +4,11 @@ $nav_color: orange;
 
 /*TODO review and unify media breakpoints*/
 
+ul,li {
+	margin: 0;
+	padding: 0;
+}
+
 @media only screen and (max-width: 992px){ 
 		
 	body{

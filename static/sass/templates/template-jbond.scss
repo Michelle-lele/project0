@@ -2,7 +2,6 @@
 $highlight_color: red;
 $borders_color: red;
 
-
 @media only screen and (max-width: 992px){ 
 	#overview {
 		text-align: left;
@@ -24,25 +23,60 @@ $borders_color: red;
 }
 
 #overview {
+	margin-left: 5px;
 	display: grid;
 	grid-template-rows: 1fr auto 5fr;
 	background-color: black;
 	color: white;
+	min-width: 220px;
+	border: 1.5px  $borders_color;
+	border-style: none dashed;
 
 	ul {
 		list-style: none;
 	}
+
+	.details {
+		margin: auto;
+		line-height: 25pt;
+		padding: 10px;
+
+		i {	
+			font-size: 18pt;
+			margin-right: 5px;
+		}
+	}
 }
 
 #arrow {
-	width: 0; 
-  	height: 0; 
-  	border-left: 20px solid transparent;
-  	border-right: 20px solid transparent;
-  	border-top: 20px solid white;
+	width: 100%; 
+  	height: 70%;
+  	max-height: 80px;
+  	background-image: linear-gradient(to top right, transparent 50%, white 50%),
+    linear-gradient(to top left, transparent 50%, white 50%);
+  	background-size: 50.2% 100%;
+  	background-repeat: no-repeat;
+  	background-position: top left, top right;
+}
+
+#headline {
+	font-size: 67pt;
+	background-color: white;
+	color: black;
+	max-height: 60%;
+	text-transform: uppercase;
+    letter-spacing: 3px;
+  	transform: rotate(270deg);
+
+}
+
+#cv-details {
+	padding: 15px;
+	margin: 10px;
 }
 
 .details {
+
 
 }
 
@@ -85,7 +119,7 @@ $borders_color: red;
 
 
 section {
-	border-bottom: solid 1px $borders_color;
+	border-bottom: dashed 1.5px $borders_color; 
 	margin-top: 0px;
 	margin-right: 10px;
 	margin-left: 10px;
