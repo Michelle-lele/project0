@@ -1,4 +1,24 @@
 /*James Bond Template stylesheet*/
+*::selection {
+  background-color: red;
+  color: white; }
+
+h2, #headline {
+  text-transform: uppercase;
+  font-family: "Alfa Slab One", cursive;
+  letter-spacing: 5px; }
+
+h2::after {
+  content: " --"; }
+
+h3, #content ul li {
+  font-family: "Alfa Slab One", cursive;
+  font-weight: lighter; }
+
+p, .skill, .job-details {
+  font-family: "Gruppo", cursive;
+  font-size: 1.25em; }
+
 @media only screen and (max-width: 992px) {
   #overview {
     text-align: left; } }
@@ -6,50 +26,68 @@
 /*Standard layout*/
 #content {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 6fr;
   grid-gap: 10px;
-  grid-auto-rows: 100%; }
+  grid-auto-rows: minmax(100vh, auto);
+  width: 85%;
+  margin: auto; }
 
 #overview {
-  margin-left: 5px;
   display: grid;
-  grid-template-rows: 1fr auto 5fr;
-  background-color: black;
-  color: white;
-  min-width: 220px;
+  grid-template-rows: 80px auto 50% 25%;
+  margin-left: 5px;
   border: 1.5px red;
-  border-style: none dashed; }
+  border-style: none dashed;
+  background-color: black;
+  color: white; }
   #overview ul {
     list-style: none; }
   #overview .details {
+    line-height: 18pt;
+    padding: 10px;
+    z-index: 10;
     margin: auto;
-    line-height: 25pt;
-    padding: 10px; }
+    font-size: 1em; }
     #overview .details i {
-      font-size: 18pt;
-      margin-right: 5px; }
+      font-size: 1.5em;
+      margin: 10px; }
 
 #arrow {
   width: 100%;
-  height: 70%;
   max-height: 80px;
   background-image: linear-gradient(to top right, transparent 50%, white 50%), linear-gradient(to top left, transparent 50%, white 50%);
   background-size: 50.2% 100%;
   background-repeat: no-repeat;
-  background-position: top left, top right; }
+  background-position: top left, top right;
+  z-index: 11; }
 
 #headline {
-  font-size: 67pt;
+  font-size: 5em;
   background-color: white;
   color: black;
-  max-height: 60%;
   text-transform: uppercase;
   letter-spacing: 3px;
-  transform: rotate(270deg); }
+  z-index: 9;
+  position: relative; }
+  #headline span {
+    display: block;
+    position: relative;
+    top: 0;
+    transform: rotate(270deg); }
 
 #cv-details {
   padding: 15px;
-  margin: 10px; }
+  margin: 10px;
+  width: 85%; }
+
+#content {
+  background-color: lightyellow; }
+
+.job-period {
+  display: block; }
+
+#skills section {
+  padding-bottom: 15px; }
 
 .skill {
   border: 1px solid red;
@@ -70,9 +108,5 @@ section {
   section h4 {
     margin-bottom: 2px;
     overflow-wrap: break-word; }
-
-p::selection {
-  background-color: red;
-  color: white; }
 
 /*# sourceMappingURL=template-jbond.css.map */

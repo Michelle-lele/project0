@@ -1,6 +1,34 @@
 /*James Bond Template stylesheet*/
 $highlight_color: red;
 $borders_color: red;
+$highlight_font:'Alfa Slab One', cursive;
+$text_font:'Gruppo', cursive;
+
+
+*::selection {
+	background-color: $highlight_color;
+	color: white;
+}
+
+h2, #headline {
+	text-transform: uppercase;
+	font-family: $highlight_font;
+	letter-spacing: 5px;
+}
+
+h2::after {
+	content: " --";
+}
+
+h3, #content ul li {
+	font-family: $highlight_font;
+	font-weight: lighter;
+}
+
+p, .skill, .job-details {
+	font-family: $text_font;
+	font-size: 1.25em;
+}
 
 @media only screen and (max-width: 992px){ 
 	#overview {
@@ -17,97 +45,86 @@ $borders_color: red;
 /*Standard layout*/
 #content{
 	display: grid;
-	grid-template-columns: 1fr 4fr;
+	grid-template-columns: 1fr 6fr;
 	grid-gap: 10px;
-	grid-auto-rows: 100%;
+	grid-auto-rows: minmax(100vh, auto);
+	width: 85%;
+	margin: auto;
 }
 
 #overview {
-	margin-left: 5px;
 	display: grid;
-	grid-template-rows: 1fr auto 5fr;
-	background-color: black;
-	color: white;
-	min-width: 220px;
+	grid-template-rows: 80px auto 50% 25%;
+	margin-left: 5px;
 	border: 1.5px  $borders_color;
 	border-style: none dashed;
+	background-color: black;
+	color: white;
 
 	ul {
 		list-style: none;
 	}
 
 	.details {
-		margin: auto;
-		line-height: 25pt;
+		line-height: 18pt;
 		padding: 10px;
+		// background-color: pink;
+		z-index: 10;
+		margin: auto;
+		font-size: 1em;
 
 		i {	
-			font-size: 18pt;
-			margin-right: 5px;
+			font-size: 1.5em;
+			margin: 10px;
 		}
 	}
 }
 
 #arrow {
 	width: 100%; 
-  	height: 70%;
   	max-height: 80px;
   	background-image: linear-gradient(to top right, transparent 50%, white 50%),
     linear-gradient(to top left, transparent 50%, white 50%);
   	background-size: 50.2% 100%;
   	background-repeat: no-repeat;
   	background-position: top left, top right;
+  	z-index: 11;
 }
 
 #headline {
-	font-size: 67pt;
+	font-size: 5em;
 	background-color: white;
 	color: black;
-	max-height: 60%;
 	text-transform: uppercase;
     letter-spacing: 3px;
-  	transform: rotate(270deg);
+  	z-index: 9;
+  	position: relative;
 
+  	span {
+		display: block;
+		position: relative;
+		top: 0;
+  		transform: rotate(270deg);
+  	}
 }
 
 #cv-details {
 	padding: 15px;
 	margin: 10px;
+	width: 85%;
 }
-
-.details {
-
-
-}
-
-#headline {
-
-}
-
-#summary {
-	
-}
-
-.top-title{
-	
-}
-
-.job-details{
-	
-}
-
-.profile-image{
-
-}
-
 
 #content{
+	background-color: lightyellow;
 }
 
-
-#experience, #education, #certificates, #projects{
+.job-period {
+	display: block;
 }
 
+#skills section {
+	padding-bottom: 15px;
+}
 
 .skill{
 	border: 1px solid $borders_color;
@@ -133,9 +150,4 @@ section {
 		overflow-wrap: break-word;
 	}
 
-}
-
-p::selection{
-	background-color: $highlight_color;
-	color: white;
 }
