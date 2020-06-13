@@ -11,13 +11,16 @@ h2, #headline {
 h2::after {
   content: " --"; }
 
-h3, #content ul li {
+#content ul li {
   font-family: "Alfa Slab One", cursive;
   font-weight: lighter; }
 
 p, .skill, .job-details {
   font-family: "Gruppo", cursive;
   font-size: 1.25em; }
+
+p::first-line {
+  font-weight: bold; }
 
 @media only screen and (max-width: 992px) {
   #overview {
@@ -30,7 +33,8 @@ p, .skill, .job-details {
 /*Standard layout*/
 #content {
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: minmax(250px, 20%) 80%;
+  grid-auto-columns: auto;
   grid-gap: 10px;
   grid-auto-rows: minmax(100vh, auto);
   width: 85%;
@@ -38,7 +42,7 @@ p, .skill, .job-details {
 
 #overview {
   display: grid;
-  grid-template-rows: 80px auto 50% 25%;
+  grid-template-rows: 80px auto auto auto;
   margin-left: 5px;
   border: 1.5px red;
   border-style: none dashed;
@@ -66,17 +70,17 @@ p, .skill, .job-details {
   z-index: 11; }
 
 #headline {
-  font-size: 5em;
   background-color: white;
-  color: black;
-  text-transform: uppercase;
-  letter-spacing: 3px;
   z-index: 9;
-  position: relative; }
+  position: relative;
+  border: 1px solid blue; }
   #headline span {
+    color: black;
+    font-size: 5em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     display: block;
-    position: relative;
-    top: 0;
+    position: absolute;
     transform: rotate(270deg); }
 
 #cv-details {
@@ -84,21 +88,28 @@ p, .skill, .job-details {
   margin: 10px;
   width: 85%; }
 
-#content {
-  background-color: lightyellow; }
-
 .job-period {
-  display: block; }
+  display: block;
+  font-weight: bold;
+  color: red; }
 
 #skills section {
   padding-bottom: 15px; }
 
 .skill {
-  border: 1px solid red;
   padding: 8px;
-  font-size: 18px;
-  display: inline-block;
+  font-size: 24px;
+  display: block;
   margin: 3px; }
+  .skill .rating {
+    color: red;
+    font-size: 24pt; }
+
+.skill::after {
+  content: "\2605\2605\2605\2605\2605";
+  color: red;
+  font-size: 24pt;
+  float: right; }
 
 section {
   border-bottom: dashed 1.5px red;

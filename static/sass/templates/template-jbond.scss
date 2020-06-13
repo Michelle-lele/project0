@@ -20,7 +20,7 @@ h2::after {
 	content: " --";
 }
 
-h3, #content ul li {
+#content ul li {
 	font-family: $highlight_font;
 	font-weight: lighter;
 }
@@ -28,6 +28,10 @@ h3, #content ul li {
 p, .skill, .job-details {
 	font-family: $text_font;
 	font-size: 1.25em;
+}
+
+p::first-line{
+	font-weight: bold;
 }
 
 @media only screen and (max-width: 992px){ 
@@ -50,7 +54,8 @@ p, .skill, .job-details {
 /*Standard layout*/
 #content{
 	display: grid;
-	grid-template-columns: 1fr 6fr;
+	grid-template-columns: minmax(250px,20%) 80%;
+	grid-auto-columns: auto;
 	grid-gap: 10px;
 	grid-auto-rows: minmax(100vh, auto);
 	width: 85%;
@@ -59,7 +64,7 @@ p, .skill, .job-details {
 
 #overview {
 	display: grid;
-	grid-template-rows: 80px auto 50% 25%;
+	grid-template-rows: 80px auto auto auto;
 	margin-left: 5px;
 	border: 1.5px  $borders_color;
 	border-style: none dashed;
@@ -73,7 +78,6 @@ p, .skill, .job-details {
 	.details {
 		line-height: 2pt;
 		padding: 10px;
-		// background-color: pink;
 		z-index: 10;
 		margin: auto;
 		font-size: 1em;
@@ -86,7 +90,7 @@ p, .skill, .job-details {
 }
 
 #arrow {
-	width: 100%; 
+	width: 100%;
   	max-height: 80px;
   	background-image: linear-gradient(to top right, transparent 50%, white 50%),
     linear-gradient(to top left, transparent 50%, white 50%);
@@ -97,18 +101,18 @@ p, .skill, .job-details {
 }
 
 #headline {
-	font-size: 5em;
 	background-color: white;
-	color: black;
-	text-transform: uppercase;
-    letter-spacing: 3px;
   	z-index: 9;
   	position: relative;
+  	border: 1px solid blue;
 
   	span {
+  		color: black;
+  		font-size: 5em;
+  		text-transform: uppercase;
+    	letter-spacing: 3px;
 		display: block;
-		position: relative;
-		top: 0;
+		position: absolute;
   		transform: rotate(270deg);
   	}
 }
@@ -120,11 +124,13 @@ p, .skill, .job-details {
 }
 
 #content{
-	background-color: lightyellow;
+	// background-color: lightyellow;
 }
 
 .job-period {
 	display: block;
+	font-weight: bold;
+	color: $highlight_color;
 }
 
 #skills section {
@@ -132,13 +138,24 @@ p, .skill, .job-details {
 }
 
 .skill{
-	border: 1px solid $borders_color;
 	padding: 8px;
-	font-size: 18px;
-	display: inline-block;
+	font-size: 24px;
+	display: block;
 	margin: 3px;
+
+	.rating {
+		color: $highlight_color;
+		font-size: 24pt;
+
+	}
 }
 
+.skill::after {
+	content: "\2605\2605\2605\2605\2605";
+	color: $highlight_color;
+	font-size: 24pt;
+	float: right;
+}
 
 section {
 	border-bottom: dashed 1.5px $borders_color; 
