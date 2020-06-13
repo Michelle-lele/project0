@@ -34,11 +34,16 @@ p, .skill, .job-details {
 	#overview {
 		text-align: left;
 	}
+
 }
 
 /*Tablet portrait view? */
 
 @media only screen and (max-width: 600px){ 
+	#content {
+		width: 100%;
+		background-color: red;
+	}
 
 }
 
@@ -66,7 +71,7 @@ p, .skill, .job-details {
 	}
 
 	.details {
-		line-height: 18pt;
+		line-height: 2pt;
 		padding: 10px;
 		// background-color: pink;
 		z-index: 10;
@@ -75,7 +80,7 @@ p, .skill, .job-details {
 
 		i {	
 			font-size: 1.5em;
-			margin: 10px;
+			margin: 10px 10px 0 10px;
 		}
 	}
 }

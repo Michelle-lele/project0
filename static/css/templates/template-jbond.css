@@ -23,6 +23,10 @@ p, .skill, .job-details {
   #overview {
     text-align: left; } }
 /*Tablet portrait view? */
+@media only screen and (max-width: 600px) {
+  #content {
+    width: 100%;
+    background-color: red; } }
 /*Standard layout*/
 #content {
   display: grid;
@@ -43,14 +47,14 @@ p, .skill, .job-details {
   #overview ul {
     list-style: none; }
   #overview .details {
-    line-height: 18pt;
+    line-height: 2pt;
     padding: 10px;
     z-index: 10;
     margin: auto;
     font-size: 1em; }
     #overview .details i {
       font-size: 1.5em;
-      margin: 10px; }
+      margin: 10px 10px 0 10px; }
 
 #arrow {
   width: 100%;
