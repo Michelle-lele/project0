@@ -9,7 +9,7 @@ h2, #headline {
   letter-spacing: 5px; }
 
 h2::after {
-  content: " --"; }
+  content: "--"; }
 
 #content ul li {
   font-family: "Alfa Slab One", cursive;
@@ -17,19 +17,25 @@ h2::after {
 
 p, .skill, .job-details {
   font-family: "Gruppo", cursive;
-  font-size: 1.25em; }
+  font-size: 1.1em; }
 
 p::first-line {
   font-weight: bold; }
 
 @media only screen and (max-width: 992px) {
   #overview {
-    text-align: left; } }
-/*Tablet portrait view? */
-@media only screen and (max-width: 600px) {
-  #content {
+    text-align: left; }
+
+  body #content {
+    background-color: red;
+    display: inline;
     width: 100%;
-    background-color: red; } }
+    margin: auto auto auto 25px; }
+  body #headline span {
+    display: none; }
+  body .skill {
+    margin: auto; } }
+/*Tablet portrait view? */
 /*Standard layout*/
 #content {
   display: grid;
@@ -70,10 +76,10 @@ p::first-line {
   z-index: 11; }
 
 #headline {
+  display: none;
   background-color: white;
   z-index: 9;
-  position: relative;
-  border: 1px solid blue; }
+  position: relative; }
   #headline span {
     color: black;
     font-size: 5em;
@@ -98,17 +104,20 @@ p::first-line {
 
 .skill {
   padding: 8px;
-  font-size: 24px;
+  font-size: 22px;
   display: block;
-  margin: 3px; }
+  margin: 3px;
+  text-align: left;
+  max-width: 360px;
+  align-self: center; }
   .skill .rating {
     color: red;
-    font-size: 24pt; }
+    font-size: 22pt; }
 
 .skill::after {
   content: "\2605\2605\2605\2605\2605";
   color: red;
-  font-size: 24pt;
+  font-size: 22pt;
   float: right; }
 
 section {

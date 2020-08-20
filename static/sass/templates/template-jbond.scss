@@ -17,7 +17,7 @@ h2, #headline {
 }
 
 h2::after {
-	content: " --";
+	content: "--";
 }
 
 #content ul li {
@@ -27,7 +27,7 @@ h2::after {
 
 p, .skill, .job-details {
 	font-family: $text_font;
-	font-size: 1.25em;
+	font-size: 1.1em;
 }
 
 p::first-line{
@@ -39,15 +39,28 @@ p::first-line{
 		text-align: left;
 	}
 
+	body {
+
+		#content {
+			background-color: red;
+			display: inline;
+			width: 100%;
+			margin: auto auto auto 25px;
+		}
+		
+		#headline span {
+			display: none;
+		}
+
+		.skill {
+			margin: auto;
+		}
+	}
 }
 
 /*Tablet portrait view? */
 
 @media only screen and (max-width: 600px){ 
-	#content {
-		width: 100%;
-		background-color: red;
-	}
 
 }
 
@@ -101,10 +114,10 @@ p::first-line{
 }
 
 #headline {
+	display: none;
 	background-color: white;
   	z-index: 9;
   	position: relative;
-  	border: 1px solid blue;
 
   	span {
   		color: black;
@@ -121,6 +134,10 @@ p::first-line{
 	padding: 15px;
 	margin: 10px;
 	width: 85%;
+
+	h3 {
+		// color: ;
+	}
 }
 
 #content{
@@ -139,13 +156,16 @@ p::first-line{
 
 .skill{
 	padding: 8px;
-	font-size: 24px;
+	font-size: 22px;
 	display: block;
 	margin: 3px;
+	text-align: left;
+	max-width: 360px;
+	align-self: center;
 
 	.rating {
 		color: $highlight_color;
-		font-size: 24pt;
+		font-size: 22pt;
 
 	}
 }
@@ -153,7 +173,7 @@ p::first-line{
 .skill::after {
 	content: "\2605\2605\2605\2605\2605";
 	color: $highlight_color;
-	font-size: 24pt;
+	font-size: 22pt;
 	float: right;
 }
 
