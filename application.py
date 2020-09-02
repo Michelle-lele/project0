@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, session
 
 
 app = Flask(__name__)
+app.config.from_envvar('APP_SETTINGS')
 
 @app.route("/")
 @app.route("/index.html")
