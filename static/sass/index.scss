@@ -110,6 +110,27 @@ div .row h4, #templates h3, #home i{
 	}
 }
 
+.form {
+	padding: 30px;
+	
+}
+
+.form input {
+	border: 2px solid lightgrey;
+	display: block;
+	margin: 20px auto 20px auto;
+	padding: 8px;
+	width: 80%;
+	max-width: 300px;
+}
+
+.form button {
+		width: 80%;
+		max-width: 300px;
+		padding: 8px;
+	}
+
+
 #templates h2, #about h2{
 	color: orange;
 	text-align: center;
@@ -132,16 +153,8 @@ div .row h4, #templates h3, #home i{
 	}
 
 	button {
-		background-color: white;
-		border: 1px solid $templates_style;
-		border-radius: 3px;
 		width: 95%;
 		height: 40px;
-		font-weight: bold;
-		font-size: 13pt;
-		text-transform: uppercase;
-		color: $templates_style;
-		text-decoration: none;
 		display: block;
 		padding: 0px;
 		margin: 0px;
@@ -159,8 +172,18 @@ div .row h4, #templates h3, #home i{
 	border-color: $templates_style;
 }
 
+button {
+	background-color: white;
+	border: 1px solid $templates_style;
+	border-radius: 3px;
+	font-weight: bold;
+	font-size: 13pt;
+	text-transform: uppercase;
+	color: $templates_style;
+	text-decoration: none;
+}
 
-.template button:hover{
+button:hover{
 	background-color: $templates_style;
 	color: white;
 }

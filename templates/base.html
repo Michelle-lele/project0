@@ -23,10 +23,11 @@
 	    			{% block nav %}
 	    			{% endblock %}
 	    		</ul>	
-	    		<span id="account">{% if user_name %}
-				    Hello, {{ user_name }}
+	    		<span id="account">
+                    {% if user_name %}
+				        Hello, {{ user_name }}
 				    {% else %}
-				    <li><a href="{{ url_for('signup') }}">Signup</a></li>
+				        <li><a href="{{ url_for('signup') }}">Signup</a></li>
 				    {% endif %}
 				</span>
     		</nav>
@@ -35,10 +36,12 @@
 	    </div>
 
     	{% block content %}
-
         {% endblock %}
+
  		<div id="footer">
 			<span>Simple CV Maker&#174; 2019</span>
 		</div>
+        <script type="text/javascript" src="/static/js/script.js">
+        </script>
     </body>
 </html>
