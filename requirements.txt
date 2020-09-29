@@ -1,0 +1,8 @@
+python-dotenv
+FLASK
+psycopg2
+sqlalchemy
+Flask-Session
+Jinja2
+Werkzeug
+requests
