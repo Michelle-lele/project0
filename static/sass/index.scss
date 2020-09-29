@@ -35,6 +35,10 @@ $templates_style: orange;
 	}
 }
 
+body {
+	min-height: 100vh;
+}
+
 nav {
 	text-align: center;
 	z-index: 3;
@@ -73,7 +77,7 @@ h1 {
 }
 
 p::selection{
-	background-color: orange;
+	background-color: $templates_style;
 	color: white;
 }
 
@@ -115,13 +119,26 @@ div .row h4, #templates h3, #home i{
 	
 }
 
-.form input {
+input {
 	border: 2px solid lightgrey;
-	display: block;
-	margin: 20px auto 20px auto;
 	padding: 8px;
 	width: 80%;
 	max-width: 300px;
+}
+
+input:focus {
+		outline-color: $templates_style;
+	}
+
+form > * {
+	display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.form input {
+	display: block;
+	margin: 20px auto 20px auto;
 }
 
 .form button {
@@ -130,9 +147,13 @@ div .row h4, #templates h3, #home i{
 		padding: 8px;
 	}
 
+.error-message {
+	color: red;
+	font-size: 21pt;
+}
 
 #templates h2, #about h2{
-	color: orange;
+	color: $templates_style;
 	text-align: center;
 	padding-top: 10px;
 	margin-top: 50px;

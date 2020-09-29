@@ -34,7 +34,7 @@ def signup():
 		if not request.form.get("password"):
 			errorMessages.append("Password is required!")
 
-		if not request.form.get("confirm_password"):
+		if not request.form.get("confirm-password"):
 			errorMessages.append("Confirm Password is required!")
 
 		if errorMessages != []:
@@ -45,7 +45,7 @@ def signup():
 			errorMessages.append("Username should not contain spaces!")
 
 		#ensure passwords match
-		if request.form.get("password") != request.form.get("confirm_password"):
+		if request.form.get("password") != request.form.get("confirm-password"):
 			errorMessages.append("Passwords don't match!")
 
 		if errorMessages != []:

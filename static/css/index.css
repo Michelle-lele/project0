@@ -18,6 +18,9 @@
 
   #home {
     display: none; } }
+body {
+  min-height: 100vh; }
+
 nav {
   text-align: center;
   z-index: 3; }
@@ -76,18 +79,32 @@ div .row h4, #templates h3, #home i {
 .form {
   padding: 30px; }
 
-.form input {
+input {
   border: 2px solid lightgrey;
-  display: block;
-  margin: 20px auto 20px auto;
   padding: 8px;
   width: 80%;
   max-width: 300px; }
+
+input:focus {
+  outline-color: orange; }
+
+form > * {
+  display: block;
+  margin: auto;
+  text-align: center; }
+
+.form input {
+  display: block;
+  margin: 20px auto 20px auto; }
 
 .form button {
   width: 80%;
   max-width: 300px;
   padding: 8px; }
+
+.error-message {
+  color: red;
+  font-size: 21pt; }
 
 #templates h2, #about h2 {
   color: orange;
