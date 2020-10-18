@@ -1,20 +1,11 @@
 import os 
 
 from flask import Flask, render_template, request, session
-from sqlalchemy import create_engine
-from sqlalchemy.orm import scoped_session, sessionmaker
+from database import db
+from models import User
 
 app = Flask(__name__)
 app.config.from_envvar('APP_SETTINGS')
-
-# Check for environment variable
-if not os.getenv("DATABASE_URL"):
-	raise RuntimeError("DATABASE_URL is not set")
-
-# Set up database
-engine = create_engine(os.getenv("DATABASE_URL"))
-db = scoped_session(sessionmaker(bind=engine))
-
 
 @app.route("/")
 @app.route("/index.html")
@@ -61,11 +52,15 @@ def signup():
 			return render_template("signup.html", errorMessages=errorMessages)
 
 		#ensure username doesn't exist
-		# username= db.execute("SELECT * FROM users WHERE username = :username", {"username": request.form.get("username")}).fetchall()
-		# #print(usernames, file=sys.stderr)
-		# if len(username) != 0:
-		# 	errorMessages.append("Username already exists!")
-		# 	return render_template("signup.html", errorMessages=errorMessages)
+		username = db.query(User.username.label(request.form.get("username"))).all()
+		#print(username, file=sys.stderr)
+		if len(username) != 0:
+			errorMessages.append("Username already exists!")
+			return render_template("signup.html", errorMessages=errorMessages)
+
+		#create new user
+		newUser = User(username=request.form.get("username"), password=request.form.get("password"))
+		db.commit()
 
 	return render_template("signup.html")
 
