@@ -151,6 +151,11 @@ form > * {
 	color: red;
 	font-size: 21pt;
 }
+ 
+.success-message {
+	color: green;
+	font-size: 21pt;
+}
 
 #templates h2, #about h2{
 	color: $templates_style;

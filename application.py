@@ -1,8 +1,9 @@
-import os 
+import os, sys
 
 from flask import Flask, render_template, request, session
 from database import db
 from models import User
+from werkzeug.security import check_password_hash, generate_password_hash
 
 app = Flask(__name__)
 app.config.from_envvar('APP_SETTINGS')
@@ -17,10 +18,14 @@ def index():
 @app.route("/signup.html", methods=["POST", "GET"])
 def signup():
 	if request.method == "POST":
-		errorMessages= []
+		errorMessages = []
+		successMessages = []
 		#ensure required fields are submitted
 		if not request.form.get("username"):
 			errorMessages.append("Username is required!")
+
+		if not request.form.get("email"):
+			errorMessages.append("Email is required!")
 		
 		if not request.form.get("password"):
 			errorMessages.append("Password is required!")
@@ -30,10 +35,6 @@ def signup():
 
 		if errorMessages != []:
 			return render_template("signup.html", errorMessages=errorMessages)
-
-		#ensure username has no spaces
-		if ' ' in request.form.get("username"):
-			errorMessages.append("Username should not contain spaces!")
 
 		#ensure passwords match
 		if request.form.get("password") != request.form.get("confirm-password"):
@@ -51,18 +52,20 @@ def signup():
 		if errorMessages != []:
 			return render_template("signup.html", errorMessages=errorMessages)
 
-		#ensure username doesn't exist
-		username = db.query(User.username.label(request.form.get("username"))).all()
-		#print(username, file=sys.stderr)
-		if len(username) != 0:
-			errorMessages.append("Username already exists!")
+		#ensure email doesn't exist
+		emails = db.query(User).filter(User.email==request.form.get("email")).count()
+		
+		if emails != 0:
+			errorMessages.append("Email address already exists!")
 			return render_template("signup.html", errorMessages=errorMessages)
 
 		#create new user
-		newUser = User(username=request.form.get("username"), password=request.form.get("password"))
+		newUser = User(username=request.form.get("username"), email=request.form.get("email"), password=generate_password_hash(request.form.get("password")))
+		db.add(newUser)
 		db.commit()
+		successMessages.append(f"The user has been successfully created!")
 
-	return render_template("signup.html")
+	return render_template("signup.html", successMessages=successMessages)
 
 
 @app.route("/template-leia.html")

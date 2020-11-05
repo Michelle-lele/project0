@@ -2,7 +2,9 @@ python-dotenv
 FLASK
 psycopg2
 sqlalchemy
+sqlalchemy_utils
 Flask-Session
 Jinja2
 Werkzeug
 requests
+sass

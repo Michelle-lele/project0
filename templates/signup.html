@@ -18,7 +18,13 @@
 							<span class="error-message">{{ errorMessage }}</span>
 						{% endfor %}
 					{% endif %}
-					<input type="text" name="username" placeholder="Username *" autocomplete="username" required>
+					{% if successMessages %}
+						{% for successMessage in successMessages %}
+							<span class="success-message">{{ successMessage }}</span>
+						{% endfor %}
+					{% endif %}
+					<input type="text" name="username" placeholder="Name *" autocomplete="name" required>
+					<input type="email" name="email" placeholder="Email *" autocomplete="email" required>
 					<input type="password" name="password" placeholder="Password *" autocomplete="new-password" required>
 					<input type="password" name="confirm-password" placeholder="Confirm Password *" autocomplete="new-password" required>
 					<button type="submit">Sign Up</button>

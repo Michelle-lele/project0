@@ -12,5 +12,3 @@ engine = create_engine(os.getenv("DATABASE_URL"),echo=True)
 db = scoped_session(sessionmaker(bind=engine))
 
 Base = declarative_base()
-
-#TO DO instantiate session
