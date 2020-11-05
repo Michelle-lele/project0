@@ -1,6 +1,6 @@
 from sqlalchemy import Integer, Column, String
 from sqlalchemy.types import Date, DateTime
-from database import Base
+from database import Base, engine
 import datetime
 
 class User(Base):
@@ -11,3 +11,4 @@ class User(Base):
 	password = Column(String)
 	registered_at = Column(DateTime, default=datetime.datetime.utcnow)
 
+Base.metadata.create_all(engine)
