@@ -26,8 +26,10 @@
 	    		<span id="account">
                     {% if user_name %}
 				        Hello, {{ user_name }}
+                        <li><a href="">Log out</a></li>
 				    {% else %}
 				        <li><a href="{{ url_for('signup') }}">Signup</a></li>
+                        <li><a href="{{ url_for('login') }}">Login</a></li>
 				    {% endif %}
 				</span>
     		</nav>

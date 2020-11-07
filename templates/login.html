@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block nav %}
+	    <li><a href="/">Home</a></li>
+	{% endblock %}
+
+	{% block topcontent %}
+	    <div id="headline">
+	        <h1>Login</h1>
+	        <h3>Login to your CV Maker account</h3>
+	    </div>
+	{% endblock %}
+
+	{% block content %}
+			<div class="container-fluid">
+				<form name="signup" class="form" action = "{{ url_for('login') }}" method="post">
+					{% if errorMessages %}
+						{% for errorMessage in errorMessages %}
+							<span class="error-message">{{ errorMessage }}</span>
+						{% endfor %}
+					{% endif %}
+					{% if successMessages %}
+						{% for successMessage in successMessages %}
+							<span class="success-message">{{ successMessage }}</span>
+						{% endfor %}
+					{% endif %}
+					<input type="email" name="email" placeholder="Email *" autocomplete="email" required>
+					<input type="password" name="password" placeholder="Password *" autocomplete="new-password" required>
+					<button type="submit">Login</button>
+				</form>
+			</div>
+	{% endblock %}

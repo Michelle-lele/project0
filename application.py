@@ -1,12 +1,16 @@
 import os, sys
 
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, redirect, url_for
+from functools import wraps
+from werkzeug.security import check_password_hash, generate_password_hash
 from database import db
 from models import User
-from werkzeug.security import check_password_hash, generate_password_hash
 
 app = Flask(__name__)
 app.config.from_envvar('APP_SETTINGS')
+
+#def login_required(f):
+
 
 @app.route("/")
 @app.route("/index.html")
@@ -15,7 +19,7 @@ def index():
 	user_name = user_name.capitalize()
 	return render_template("index.html", user_name=user_name)
 
-@app.route("/signup.html", methods=["POST", "GET"])
+@app.route("/signup", methods=["POST", "GET"])
 def signup():
 	if request.method == "POST":
 		errorMessages = []
@@ -63,10 +67,38 @@ def signup():
 		newUser = User(username=request.form.get("username"), email=request.form.get("email"), password=generate_password_hash(request.form.get("password")))
 		db.add(newUser)
 		db.commit()
-		successMessages.append(f"The user has been successfully created!")
+		successMessages.append(f"You have registered successfully!")
+		return render_template("signup.html", successMessages=successMessages)
 
-	return render_template("signup.html", successMessages=successMessages)
+	return render_template("signup.html")
 
+@app.route("/login", methods=["POST", "GET"])
+def login():
+	errorMessages = []
+
+	if request.method == "POST":
+		if not request.form.get("email"):
+			errorMessages.append("Username is required!")
+		
+		if not request.form.get("password"):
+			errorMessages.append("Password is required!")
+
+		if errorMessages != []:
+			return render_template("login.html", errorMessages=errorMessages)
+
+		user = db.query(User).filter(User.email == request.form.get("email")).count()
+		#WIP check hash
+		password = db.query(User).filter(User.password == request.form.get("password")).count()
+		print(user, file=sys.stderr)
+		print(password, file=sys.stderr)
+		
+		if user == 1 or password == 1:
+			errorMessages.append("Your username or password are not correct!")		
+			return render_template("login.html", errorMessages=errorMessages)
+		else:
+			return redirect(url_for('index'))
+
+	return render_template("login.html")
 
 @app.route("/template-leia.html")
 def template_leia():
