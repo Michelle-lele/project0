@@ -26,6 +26,8 @@
 					<input type="email" name="email" placeholder="Email *" autocomplete="email" required>
 					<input type="password" name="password" placeholder="Password *" autocomplete="new-password" required>
 					<button type="submit">Login</button>
+					<span>You don't have an account? You can <a href="{{url_for('signup')}}">sign up here.</a></span>
 				</form>
+
 			</div>
 	{% endblock %}
