@@ -24,12 +24,12 @@
 	    			{% endblock %}
 	    		</ul>	
 	    		<span id="account">
-                    {% if True %}
-				        Hello, 
-                        <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                    {% if session['user_id'] %}
+				        <li id="greeting">Hello, {{ session['username'] }}</li>
+                        <li><a href="{{ url_for('logout') }}">Logout<i class="fas fa-sign-out-alt"></i></a></li>
 				    {% else %}
-				        <li><a href="{{ url_for('signup') }}">Signup</a></li>
-                        <li><a href="{{ url_for('login') }}">Login</a></li>
+				        <li><a href="{{ url_for('signup') }}">Signup<i class="fas fa-user-plus"></i></a></li>
+                        <li><a href="{{ url_for('login') }}">Login<i class="fas fa-sign-in-alt"></i></a></li>
 				    {% endif %}
 				</span>
     		</nav>

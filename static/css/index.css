@@ -33,13 +33,20 @@ nav {
     padding: 10px;
     font-size: large;
     text-transform: uppercase; }
+    nav li i {
+      display: inline-block;
+      margin-left: 4px; }
 
 #account {
   color: white;
   position: absolute;
   top: 0;
   right: 0;
-  margin: 10px; }
+  margin: 0px 10px 0px 10px; }
+
+#greeting {
+  font-size: medium;
+  text-transform: none; }
 
 nav a, a:hover, #home i:hover {
   color: orange; }

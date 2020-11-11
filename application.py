@@ -1,7 +1,6 @@
 import os, sys
 
 from flask import (
-	g,
 	Flask,
 	redirect,
 	render_template,
@@ -27,12 +26,11 @@ Session(app)
 def login_required(f):
 	@wraps(f)
 	def decorated_function(*args, **kwargs):
-		if user_id not in session:
+		if session.get("user_id") is None:
 			return redirect(url_for('login', next=request.url))
 		return f(*args, **kwargs)
 	return decorated_function
 
-@login_required
 @app.route("/")
 @app.route("/index.html")
 def index():
@@ -116,7 +114,7 @@ def login():
 			return render_template("login.html", errorMessages=errorMessages)
 		else:
 			session['user_id'] = user[0].id
-			#g.user = user[0]
+			session['username'] = user[0].username
 			return redirect(url_for('index'))
 
 	return render_template("login.html")
@@ -124,7 +122,6 @@ def login():
 @app.route("/logout", methods = ['POST', 'GET'])
 def logout():
 	session.clear()
-	#g.user = None
 	return redirect(url_for("login"))
 
 @app.route("/template-leia.html")

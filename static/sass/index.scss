@@ -54,6 +54,11 @@ nav {
 		padding: 10px;
 		font-size: large;
 		text-transform: uppercase;
+
+		i {
+			display: inline-block;
+			margin-left: 4px;
+		}
 	}
 
 }
@@ -63,8 +68,13 @@ nav {
 		position: absolute;
 		top: 0;
 		right: 0;
-		margin: 10px;
+		margin: 0px 10px 0px 10px;
 	}
+
+#greeting {
+			font-size: medium;
+			text-transform: none;
+		}
 
 nav a, a:hover, #home i:hover{
 	color: $nav_color;
@@ -118,6 +128,7 @@ div .row h4, #templates h3, #home i{
 	padding: 30px;
 	
 }
+
 
 input {
 	border: 2px solid lightgrey;
