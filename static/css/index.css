@@ -111,11 +111,15 @@ form > * {
 
 .error-message {
   color: red;
-  font-size: 21pt; }
+  font-size: 21pt;
+  margin: 3px 0px 5px 0px; }
 
 .success-message {
   color: green;
   font-size: 21pt; }
+
+form > span {
+  margin-top: 10px; }
 
 #templates h2, #about h2 {
   color: orange;

@@ -13,11 +13,6 @@
 	{% block content %}
 			<div class="container-fluid">
 				<form name="signup" class="form" action = "{{ url_for('login') }}" method="post">
-					{% if errorMessages %}
-						{% for errorMessage in errorMessages %}
-							<span class="error-message">{{ errorMessage }}</span>
-						{% endfor %}
-					{% endif %}
 					{% if successMessages %}
 						{% for successMessage in successMessages %}
 							<span class="success-message">{{ successMessage }}</span>
@@ -26,6 +21,11 @@
 					<input type="email" name="email" placeholder="Email *" autocomplete="email" required>
 					<input type="password" name="password" placeholder="Password *" autocomplete="new-password" required>
 					<button type="submit">Login</button>
+					{% if errorMessages %}
+						{% for errorMessage in errorMessages %}
+							<span class="error-message">{{ errorMessage }}</span>
+						{% endfor %}
+					{% endif %}
 					<span>You don't have an account? You can <a href="{{url_for('signup')}}">sign up here.</a></span>
 				</form>
 
