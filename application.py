@@ -115,7 +115,7 @@ def login():
 		else:
 			session['user_id'] = user[0].id
 			session['username'] = user[0].username
-			return redirect(url_for('index'))
+			return redirect(url_for('dashboard'))
 
 	return render_template("login.html")
 
@@ -123,6 +123,11 @@ def login():
 def logout():
 	session.clear()
 	return redirect(url_for("login"))
+
+@app.route("/dashboard", methods = ['POST', 'GET'])
+@login_required
+def dashboard():
+	return render_template("dashboard.html")
 
 @app.route("/template-leia.html")
 def template_leia():
