@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block nav %}
+	    <li><a href="/">Home</a></li>
+	{% endblock %}
+
+	{% block topcontent %}
+	    <div id="headline">
+	        <h1>Welcome, 
+	        	{% if session['user_id'] %}
+	        		{{ session['username'] }}!
+	        	{% endif %}
+	        </h1>
+	        <h3>Create and share your CV in minutes from your dashboard</h3>
+	    </div>
+	{% endblock %}
+
+	{% block content %}
+		<div class="container-fluid">
+			<h1>My CVs - view, add, create and delete. </h1>
+			<h1>Templates</h1>
+		</div>
+	{% endblock %}
