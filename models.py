@@ -43,6 +43,11 @@ class CV(Base):
 	email = Column(String(50))
 	website = Column(String(50))
 	summary = Column(String(250))
+	cv_jobs = relationship("Job")
+	cv_education = relationship("Education")
+	cv_skills = relationship("Skill")
+	cv_languages = relationship("Language")
+	cv_projects = relationship("Project")
 
 class Job(Base):
 	__tablename__ = "jobs"
